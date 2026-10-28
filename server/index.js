@@ -11,8 +11,12 @@ import cors from "cors";
 
 const app = express();
 app.use(cors({
-    origin: "https://interviewprepai-client-1y64.onrender.com",
-    credentials: true
+origin: [
+"https://interviewprepai-client-1y64.onrender.com"
+],
+credentials: true,
+methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.json());
